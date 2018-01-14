@@ -13,4 +13,5 @@ public interface FlashPartyRepository {
 
     Set<FlashPartySuggestion> findAll();
 
+    // Will need to delete some in the future when users quit or upon expiration
 }

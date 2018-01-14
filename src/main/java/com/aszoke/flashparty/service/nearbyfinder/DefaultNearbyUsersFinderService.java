@@ -18,7 +18,7 @@ public class DefaultNearbyUsersFinderService implements NearbyUsersFinderService
     private NearbyUsersFinderStrategy nearbyUsersFinderStrategy;
 
     @Override
-    public Set<User> findNearbyUsers(User source) {
+    public Set<User> findNearbyUsers(User source, Set<User> users) {
         return nearbyUsersFinderStrategy.findNearbyUsers(source, getAllUsersExceptSource(source));
     }
 

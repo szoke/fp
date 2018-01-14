@@ -30,5 +30,5 @@ public class DefaultFlashPartyRepository implements FlashPartyRepository {
     public Set<FlashPartySuggestion> findAll() {
         return new HashSet<>(flashPartySuggestions.values());
     }
-
+    
 }

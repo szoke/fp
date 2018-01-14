@@ -6,6 +6,6 @@ import java.util.Set;
 
 public interface NearbyUsersFinderService {
 
-    Set<User> findNearbyUsers(User sourceUser);
+    Set<User> findNearbyUsers(User sourceUser, Set<User> users);
 
 }
