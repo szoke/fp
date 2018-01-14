@@ -24,6 +24,17 @@
         <swagger.version>2.4.0</swagger.version>
     </properties>
 
+    <!--
+        In a real world app I would use:
+        - CheckStyle
+        - PMD
+        - JaCoCo
+        - Multiple Maven modules for application tiers
+        - Probably even leverage Java 9 modularization
+        - Application properties for different environments (dev, staging, production)
+        - Docker
+    -->
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

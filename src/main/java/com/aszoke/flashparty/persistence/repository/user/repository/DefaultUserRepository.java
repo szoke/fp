@@ -10,6 +10,14 @@ import org.springframework.stereotype.Component;
 
 import java.util.*;
 
+/*
+    In real life I wouldn't write this by hand. Probably a Spring Data repository would replace it.
+    In order for the platform to be scalable, it should be possible to run multiple instances of this app,
+    then an in-memory repository is not an option. Some data store would store the users' geolocation and the
+    flash parties and the data would be somehow partitioned. Also, the data store would emit events when new
+    flash party suggestions are available for a given user. Then, in a microservice world, probably another service
+    would process that event and send a message to the users' device.
+ */
 @Component
 public class DefaultUserRepository implements UserRepository, Observable<Observer<Set<User>>> {
 

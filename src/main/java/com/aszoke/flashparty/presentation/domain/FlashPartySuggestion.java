@@ -24,6 +24,7 @@ public class FlashPartySuggestion {
         return users;
     }
 
+    // When are 2 flash parties considered equal? This equals() should be revisited when Business clarifies
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -17,8 +17,14 @@ public class UpdateUserController {
     @Autowired
     private UserService userService;
 
+    /*
+        In real life I would probably bind incoming data into a DTO and validate it.
+        I would pay more attention to distinguishing between DTOs and domain objects.
+     */
     @RequestMapping(value = "/users/{id}/geolocation", method = RequestMethod.POST)
     public ResponseEntity<FlashPartySuggestion> update(@PathVariable("id") long id, @RequestBody GeoLocation geoLocation) {
+        // In real life I would not leak entities to this level
+        // Application tears would have their own domains
         Optional<User> user = updateUser(id, geoLocation);
         return createEmptyResponseEntity();
     }
