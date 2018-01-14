@@ -31,7 +31,7 @@ public class DefaultFlashPartySuggestionFacade implements FlashPartySuggestionFa
         HashSet<User> users = new HashSet<>();
         users.add(user);
         users.addAll(nearbyUsers);
-        return Optional.of(new FlashPartySuggestion(users));
+        return Optional.of(new FlashPartySuggestion(1L, users));
     }
 
 }
