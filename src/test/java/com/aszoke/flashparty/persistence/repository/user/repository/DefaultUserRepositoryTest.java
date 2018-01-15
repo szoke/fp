@@ -10,6 +10,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.Set;
 
@@ -103,7 +104,7 @@ public class DefaultUserRepositoryTest {
     }
 
     private GeoLocation createGeoLocation() {
-        return new GeoLocation(1L, 2L);
+        return new GeoLocation(1L, 2L, LocalDateTime.now());
     }
 
 }

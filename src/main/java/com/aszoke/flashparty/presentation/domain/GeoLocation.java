@@ -1,21 +1,19 @@
 package com.aszoke.flashparty.presentation.domain;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class GeoLocation {
 
     private long latitude;
-
     private long longitude;
+    private LocalDateTime timeStamp;
 
-    public GeoLocation() {
-    }
-
-    public GeoLocation(long latitude, long longitude) {
+    public GeoLocation(long latitude, long longitude, LocalDateTime timeStamp) {
         this.latitude = latitude;
         this.longitude = longitude;
+        this.timeStamp = timeStamp;
     }
-
 
     @Override
     public boolean equals(Object o) {
@@ -37,5 +35,9 @@ public class GeoLocation {
 
     public long getLongitude() {
         return longitude;
+    }
+
+    public LocalDateTime getTimeStamp() {
+        return timeStamp;
     }
 }

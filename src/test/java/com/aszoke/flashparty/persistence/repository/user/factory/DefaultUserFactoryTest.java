@@ -5,6 +5,8 @@ import com.aszoke.flashparty.presentation.domain.User;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDateTime;
+
 import static org.junit.Assert.assertEquals;
 
 public class DefaultUserFactoryTest {
@@ -23,8 +25,8 @@ public class DefaultUserFactoryTest {
 
     @Test
     public void testCreateShouldCreateNewUserWithIncrementingIdWhenParametersAreValid() {
-        GeoLocation geoLocation1 = new GeoLocation(1L, 1L);
-        GeoLocation geoLocation2 = new GeoLocation(2L, 2L);
+        GeoLocation geoLocation1 = new GeoLocation(1L, 1L, LocalDateTime.now());
+        GeoLocation geoLocation2 = new GeoLocation(2L, 2L, LocalDateTime.now());
 
         User user1 = underTest.create(geoLocation1);
         User user2 = underTest.create(geoLocation2);
