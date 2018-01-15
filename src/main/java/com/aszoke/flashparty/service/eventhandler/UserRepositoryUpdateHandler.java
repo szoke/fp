@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @Component
 public class UserRepositoryUpdateHandler implements Observer<Set<User>> {
 
-    private static final long MINIMUM_NUMBER_OF_USERS_TO_FORM_PARTY = 2;
+    private static final long MINIMUM_NUMBER_OF_USERS_TO_FORM_PARTY = 5;
 
     @Autowired
     private Observable<Observer<Set<User>>> userRepository;
