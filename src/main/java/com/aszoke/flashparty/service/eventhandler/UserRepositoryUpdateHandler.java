@@ -39,6 +39,10 @@ public class UserRepositoryUpdateHandler implements Observer<Set<User>> {
     // How do we handle overlapping flash parties?
     @Override
     public void update(Set<User> users) {
+
+        // Are we too greedy here? Maybe create suggestions for the updated user
+        // only like it worked before the API change
+        // Also TDD would help here to set clear requirements
         for (User user : users) {
             Set<User> otherUsers = getOtherUsers(user, users);
             Set<User> nearbyUsers = findNearbyUsers(user, otherUsers);
