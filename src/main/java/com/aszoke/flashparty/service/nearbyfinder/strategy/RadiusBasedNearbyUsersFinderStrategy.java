@@ -13,6 +13,7 @@ import static java.lang.Math.sqrt;
 @Component
 public class RadiusBasedNearbyUsersFinderStrategy implements NearbyUsersFinderStrategy {
 
+    // Externalize value
     private static final long RADIUS = 10;
 
     @Override

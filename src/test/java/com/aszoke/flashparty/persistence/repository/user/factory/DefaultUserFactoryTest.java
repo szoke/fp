@@ -25,8 +25,8 @@ public class DefaultUserFactoryTest {
 
     @Test
     public void testCreateShouldCreateNewUserWithIncrementingIdWhenParametersAreValid() {
-        GeoLocation geoLocation1 = new GeoLocation(1L, 1L, LocalDateTime.now());
-        GeoLocation geoLocation2 = new GeoLocation(2L, 2L, LocalDateTime.now());
+        GeoLocation geoLocation1 = new GeoLocation(1L, 1L, "2018-01-10");
+        GeoLocation geoLocation2 = new GeoLocation(2L, 2L, "2018-01-10");
 
         User user1 = underTest.create(geoLocation1);
         User user2 = underTest.create(geoLocation2);

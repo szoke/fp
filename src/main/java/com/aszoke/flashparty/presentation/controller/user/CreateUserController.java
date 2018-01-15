@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Api(tags = {"user"})
 @ApiModel(value = "User Creation", description = "Endpoint for creating a new user")
@@ -37,13 +37,13 @@ public class CreateUserController {
         return userService.create(geoLocation);
     }
 
-    private GeoLocation createGeolocation(GeoLocationDto geoLocationDto, LocalDateTime timeStamp) {
+    private GeoLocation createGeolocation(GeoLocationDto geoLocationDto, String timeStamp) {
         return geolocationTransformer.transform(geoLocationDto, timeStamp);
     }
 
-    // In real world we would need to consider time zones
-    private LocalDateTime getTimeStamp() {
-        return LocalDateTime.now();
+    // In real world we would use structure data like LocalDateTime and need to consider time zones so probably ZonedDateTime
+    private String getTimeStamp() {
+        return LocalDate.now().toString();
     }
 
     private ResponseEntity<User> createResponseEntity(User user) {

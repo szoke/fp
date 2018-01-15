@@ -104,7 +104,7 @@ public class DefaultUserRepositoryTest {
     }
 
     private GeoLocation createGeoLocation() {
-        return new GeoLocation(1L, 2L, LocalDateTime.now());
+        return new GeoLocation(1L, 2L, "2018-01-10");
     }
 
 }
