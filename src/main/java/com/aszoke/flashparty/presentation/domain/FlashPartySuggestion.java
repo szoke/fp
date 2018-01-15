@@ -8,6 +8,12 @@ public class FlashPartySuggestion {
 
     public static final FlashPartySuggestion EMPTY = new FlashPartySuggestion(0L, Collections.emptySet());
 
+    // Flash parties could have an area property so that we can check if the user is still inside when
+    // its geolocation is updated
+    // Then the flash party's area should / could be updated too
+    // But this raises the Business question: what if users that already formed a party get far away from one another
+    // Should they explicitly leave by pressing a Leave button or will the party disregarded if they don't assemble again withing a given time frame?
+
     private final long id;
     private final Set<User> users;
 
